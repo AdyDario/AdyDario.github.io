@@ -30,7 +30,7 @@ body {
 
 nav {
   background-color: #858080;
-  color: #fff;
+  color: #000000;
   padding: 1rem;
 }
 
@@ -43,17 +43,9 @@ nav {
   flex-direction:row;
   justify-content:center;
   gap: 1rem;
+  font-size: 20px;
+  font-weight: bold;
 }
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-}
-
-
 
 nav ul {
   list-style: none;
@@ -80,16 +72,15 @@ nav ul li a:hover {
 }
 
 .content-container {
-display:grid;
-grid-template-areas:
-"header header"
-"sidebar main";
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: "header header" "sidebar main";
   gap: 2rem; /* Espaço entre o main e o aside */
  
 }
 
 .main-content {
-  flex: 1; /* Main ocupa mais espaço */
+  grid-area:auto;
   background-color: #fff;
   padding: 1.5rem;
   padding-bottom: 1,5rem;
@@ -99,8 +90,9 @@ grid-template-areas:
   gap: 2px;
 }
 
+
 .img {
-  max-width: 75%; /* Garante que a imagem não ultrapasse o contêiner */
+  max-width: 80%; /* Garante que a imagem não ultrapasse o contêiner */
   height: auto;
   border-radius: 8px;
   margin-bottom: 1rem;
@@ -113,6 +105,8 @@ grid-template-areas:
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(153, 153, 153, 0.1);
   text-align:center;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .sidebar h2 {
@@ -137,6 +131,58 @@ grid-template-areas:
 
 .sidebar nav ul li a:hover {
   color: #007bff;
+}
+
+.h4{
+ font-size: 25px;
+ font-weight: bold;
+  color:goldenrod;
+  gap:5px;
+  margin-bottom: 20px;
+
+}
+
+.text{
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 10px #e20909;
+  text-decoration: #007bff;
+  gap: 5px;
+  margin-bottom: 35px;
+
+}
+
+.subtitle{`
+font-size: 80px;
+color: goldenrod;
+margin-bottom: 15px;
+}
+
+.atrailer {
+  display: block; /* Faz com que o link ocupe toda a linha */
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgtrailer {
+  display: block;
+  width: 300px; /* Define a largura da imagem */
+  height: 200px; /* Define a altura da imagem */
+  cursor: pointer; /* Muda o cursor para mão ao passar sobre a imagem */
+}
+
+.ultrailer{
+  font-size: large;
+  list-style: none;
+  display: flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content: center;
+  text-align:center;
+  align-items: center;
+  gap: 8rem;
 }
 
 footer {
